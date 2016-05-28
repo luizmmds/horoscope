@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Seu Horóscopo</title>
+    <script type="text/javascript" src="/assets/js/angular.min.js"></script>
+    <script type="text/javascript" src="/assets/js/angular-sanitize.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <meta charset="utf-8">
+</head>
+<body data-ng-app="zodiacApp">
+<div data-ng-controller="ZodiacController">
+    <header class="container-fluid main-header container-blue">
+        <h1>Seu horóscopo</h1>
+    </header>
+    <section class="container">
+        <form data-ng-submit="zodiac.get_horoscope()" class="container">
+            <div class="row">
+                <div class="form-group">
+                    <label>Insira a data do seu aniversário</label>
+                    <input type="date" data-ng-model="zodiac.birthday"/>
+                    <input type="submit">
+            </div>
+        </form>
+        <article class="container text col-xs-8 col-xs-offset-2">
+            <div data-ng-bind-html="horoscopeResult"></div>
+        </article>
+    </section>
+</div>
+
+<script type="text/javascript" src="/app/app.module.js"></script>
+<script type="text/javascript" src="/app/components/zodiac.service.js"></script>
+<script type="text/javascript" src="/app/components/zodiac.controller.js"></script>
+</body>
+</html>

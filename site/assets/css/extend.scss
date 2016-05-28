@@ -1,0 +1,24 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat|Covered+By+Your+Grace);
+
+$white: #FFFFFF;
+%color-white{color: $white;}
+
+$blue: #2B3D56;
+%color-blue{color: $blue;}
+%background-blue{background: $blue;}
+
+$dark: #424140;
+%color-dark{color: $dark;}
+%background-dark{background: $dark;}
+
+%default-font{font-family: 'Montserrat', sans-serif;}
+%cursive-font{font-family: 'Covered By Your Grace', cursive;}
+
+%text-center{text-align:center}
+%text-left{text-align:left}
+%text-right{text-align:right}
+
+%display-inline{display:inline}
+%display-block{display:block}
+
+%border-bottom{border-bottom:3px $dark solid;}
