@@ -1,0 +1,23 @@
+html, body, div, span, applet, object, iframe, table, caption,
+tbody, tfoot, thead, tr, th, td, del, dfn, em, font, img, ins,
+kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr,
+acronym, address, big, cite, code, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, figure, figcaption {
+    font-family: inherit; 
+    font-style: inherit;
+    outline: 0; 
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+a{
+    text-decoration:none;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
