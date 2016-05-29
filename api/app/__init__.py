@@ -20,7 +20,6 @@ class HoroscopeView(FlaskView):
         "libra": ('09-23', '10-22'),
         "escorpiao": ('10-23', '11-21'),
         "sagitario": ('11-22', '12-21'),
-        "capricornio": ('12-22', '01-20'),
         "aquario": ('01-21', '02-19'),
         "peixes": ('02-20', '03-20')
     }
@@ -33,7 +32,10 @@ class HoroscopeView(FlaskView):
             except ValueError:
                 return False
         else:
-            return False
+            if datetime.strptime(params.get('birthday'), '%m-%d') >= datetime.strptime('12-22', '%m-%d') or datetime.strptime(params.get('birthday'), '%m-%d') <= datetime.strptime('01-20', '%m-%d'):
+                return 'capricornio'
+            else:
+                return False
 
     def get_horoscope_text(self, text, begin, search):
         start_text = text.find(begin)
